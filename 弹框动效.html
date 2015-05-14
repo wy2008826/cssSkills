@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>弹框动效</title>
+	<style>
+		.shade{position: fixed;height: 100%;width: 100%;top: 0;left: 0;background: #999;opacity: 0.6;display: none;}
+		.prompt_alert{display: none;position: fixed;height: 200px;width:400px;top:50%;left:50%;margin-left:-200px;margin-top:-100px; background: #fff;padding:10px;box-sizing:border-box;border-radius: 10px;}
+		.prompt_alert .alert_cont{line-height: 60px;text-align: center;}
+		.prompt_alert .alert_opera{margin: 60px auto;text-align: center;}
+		.prompt_alert .alert_opera span{padding:5px 10px;color: #fff;background: #f33;}
+		.prompt_alert .alert_opera span:nth-child(2){margin-left: 100px;}
+
+		.prompt_alert.animate{-webkit-animation:test 0.4s;}
+		.prompt_alert.animate .alert_cont{-webkit-animation:bounce 0.6s;}
+		.prompt_alert.animate .alert_opera{-webkit-animation:operate 0.8s;}
+
+
+
+		.prompt_alert.fadeout{animation:fadeout 2s;-webkit-animation:fadeout 0.4s forwards;}
+
+		@-webkit-keyframes test{
+			0%{top:0;margin-top: -200px;}
+			100%{top:50%;}
+		}
+
+		@-webkit-keyframes bounce{
+			0%{-webkit-transform:translateY(-80px) rotate(-30deg);-webkit-transform-origin(0,0)}
+			30%{-webkit-transform:translateY(-80px)  rotate(-30deg);-webkit-transform-origin(0,0)}
+			80%{-webkit-transform:translateY(10px) rotate(5deg);-webkit-transform-origin(0,0)}
+			100%{-webkit-transform:translateY(0) rotate(0);-webkit-transform-origin(0,0)}
+		}
+
+
+		@-webkit-keyframes operate{
+			0%{-webkit-transform:translateX(-40px);}
+			30%{-webkit-transform:translateX(-40px);}
+			100%{-webkit-transform:translateX(0px);}
+		}
+
+		@-webkit-keyframes fadeout{
+			0%{top:50%;}
+			100%{top:100%;margin-top: 0;}
+		}
+
+	</style>
+</head>
+<body>
+	<input type="button" value="弹框">
+
+	<div class="shade"></div>
+	<div class="prompt_alert">
+		<p class="alert_cont">确定删除？</p>
+		<p class="alert_opera"><span>确定</span><span class="cancel">取消</span></p>
+	</div>
+	
+	<script src="jquery.min.js"></script>
+	<script>
+		$(function(){
+			var btn=$("input");
+
+			var shade=$(".shade");
+			var prompt=$(".prompt_alert");
+			var cancel=$(".cancel");
+			btn.click(function(){
+				prompt.show();
+				prompt.removeClass("fadeout")
+				prompt.addClass("animate");
+				shade.show();
+				prompt.show();
+			});
+
+			cancel.click(function(){
+				prompt.removeClass("animate").addClass("fadeout");
+				shade.fadeOut(400);
+
+			});
+
+		});
+	</script>
+</body>
+</html>

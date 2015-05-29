@@ -1,0 +1,48 @@
+@mixin border-radius($radius){
+	-webkit-border-radius:$radius;
+	-moz-border-radius:$radius;
+	-ms-border-radius:$radius;
+	border-radius:$radius;
+}
+
+@mixin padding($padding){
+	padding:$padding;
+}
+
+@mixin margin($margin){
+	margin:$margin;
+}
+
+@mixin horizontal-center{
+	margin-left:auto;
+	margin-right:auto;
+}
+
+@mixin float($side:left){
+	float:$side;
+}
+
+@mixin clearfix{
+	&:after{
+		content:"";
+		display:table;
+		clear:both;
+	}
+}
+
+@mixin singleline-ellipsis{
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+}
+
+@mixin opacity($opacity){
+	opacity:$opacity/100;
+	filter:alpha(opacity=$opacity);
+}
+
+@mixin kill-appearance{
+	-webkit-appearance:none;
+	appearance:none;
+	background-image:none;
+}

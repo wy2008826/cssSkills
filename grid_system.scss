@@ -6,11 +6,6 @@ $row-padding-bottom:10px;
 $row-padding-left:10px;
 $row-padding-right:10px;
 
-@import "mixin";
-div{
-	@include border-radius(10px);
-}
-
 .row{
 	padding-top:$row-padding-top;
 	padding-right:$row-padding-right;

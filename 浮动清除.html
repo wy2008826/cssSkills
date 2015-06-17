@@ -1,17 +1,32 @@
-<style>
-.clearfix:after { 
-content: ".";
-display: block;
-height: 0;
-clear: both;
-visibility: hidden; 
-} 
-.clearfix {display: inline-block;}  /* for IE/Mac */  
-</style>
-
-
-<!--[if IE]> <style type="text/css">
-.clearfix {zoom: 1;/* triggers hasLayout */ 
-display: block;/* resets display for IE/Win */}
-</style> 
-<![endif]-->
+<!doctype html>
+<html lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<title>浮动清除测试</title>
+	<style>
+		*{padding:0;margin:0;}
+		.lists{border:1px solid;list-style: none;}
+		.lists:after{content: "";display: block;clear:both;}
+		.lists li{line-height: 24px;padding:5px 15px;border:1px solid #aaa;float:left;margin: 5px 10px;}
+		
+	</style>
+	<!--[if IE]> <style type="text/css">
+	.lists {zoom: 1;display: block;}
+	</style>
+	<![endif]-->
+</head>
+<body>
+	<ul class="lists">
+		<li>213</li>
+		<li>i8pu</li>
+		<li>u</li>
+		<li>ooh</li>
+		<li>ho</li>
+		<li>ho</li>
+		<li>h</li>
+		<li>oih	o</li>
+	</ul>
+</body>
+</html>

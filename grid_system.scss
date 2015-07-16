@@ -15,6 +15,8 @@ $row-padding-right:10px;
 		content:"";
 		display:table;
 		clear:both;
+		*zoom:1;
+		*display:block;
 	}
 	&>.row{
 		margin-left:-$row-padding-left;

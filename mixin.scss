@@ -1,32 +1,24 @@
-@mixin border-radius($radius){
-	-webkit-border-radius:$radius;
-	-moz-border-radius:$radius;
-	-ms-border-radius:$radius;
+@mixin opacity($opacity:0.5){
+	opacity:$opacity;
+	filter:alpha(opacity=$opacity*100);
+}
+@mixin borderRadius($radius:4px){
 	border-radius:$radius;
+	-webkit-border-radius:$radius;
+	-o-border-radius:$radius;
+	-moz-border-radius:$radius;
 }
-
-@mixin padding($padding){
-	padding:$padding;
+@mixin inlineBlock(){
+	display:inline-block;
+	*zoom:1;
+	*display:inline;
 }
-
-@mixin margin($margin){
-	margin:$margin;
-}
-
-@mixin horizontal-center{
-	margin-left:auto;
-	margin-right:auto;
-}
-
-@mixin float($side:left){
-	float:$side;
-}
-
-@mixin clearfix{
+@mixin afterClear(){
 	&:after{
-		content:"";
-		display:table;
+		display: table;
 		clear:both;
+		*zoom:1;
+		*display:block;
 	}
 }
 
@@ -36,13 +28,3 @@
 	white-space:nowrap;
 }
 
-@mixin opacity($opacity){
-	opacity:$opacity/100;
-	filter:alpha(opacity=$opacity);
-}
-
-@mixin kill-appearance{
-	-webkit-appearance:none;
-	appearance:none;
-	background-image:none;
-}

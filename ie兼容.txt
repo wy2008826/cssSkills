@@ -12,4 +12,5 @@
 4.overflow :hidden 失效   需要加上 position：relative属性
   div{overflow:hidden;position:relative}
   
-5
+5 伪元素的支持情况
+  hover等支持性良好  :after(ie8+支持)   first-child(ie8+支持)  nth-child(){ie9+支持}

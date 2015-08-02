@@ -31,3 +31,8 @@
 	height:100%;
 	width:100%;
 }
+@mixin boxShadow($shadow){
+	box-shadow:$shadow;
+	-webkit-box-shadow:$shadow;
+	-moz-box-shadow:$shadow;
+}

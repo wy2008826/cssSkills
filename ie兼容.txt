@@ -1,0 +1,15 @@
+1.行内块级元素 在ie7下会被转换为块级元素
+      div{display:inline-block;*zoom:1;*display:inline;}
+ 
+2.浮动清除
+  ul{display:block;*zoom:1}
+  ul:after{content:"";display:block;clear:both;}
+  ul li{float:left}
+
+3.输入框光标和输入框高度不一致的情况  高度和行高一致即可
+  input{height:30px;line-height:30px;}
+  
+4.overflow :hidden 失效   需要加上 position：relative属性
+  div{overflow:hidden;position:relative}
+  
+5

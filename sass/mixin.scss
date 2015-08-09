@@ -15,7 +15,7 @@
 }
 @mixin afterClear(){
 	&:after{
-		content:"";
+		content:" ";
 		display: table;
 		clear:both;
 		*zoom:1;

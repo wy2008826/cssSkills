@@ -13,4 +13,8 @@
   div{overflow:hidden;position:relative}
   
 5 伪元素的支持情况
-  hover等支持性良好  :after(ie8+支持)   first-child(ie8+支持)  nth-child(){ie9+支持}
+  hover等支持性良好  :after(ie8+及其以上支持)   first-child(ie8+及其以上支持)  nth-child(){ie9+及其以上支持}
+
+6.baground-size  background-position (ie9+及其以上支持)
+
+

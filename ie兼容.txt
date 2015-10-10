@@ -18,3 +18,7 @@
 6.baground-size  background-position (ie9+及其以上支持)
 
 7.media查询(ie9+ 包含9  支持  所以自己写的栅格系统只能兼容到ie9)
+
+8.html5的标签ie8是不支持的，可以引用一个html5的标签兼容性js文件。
+
+9.关于css3属性ie8不支持的情况，可以使用modernizr来做兼容性处理！

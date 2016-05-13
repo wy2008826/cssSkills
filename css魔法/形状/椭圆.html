@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8">
+		<meta content="yes" name="apple-mobile-web-app-capable"> 
+		<meta content="yes" name="apple-touch-fullscreen"> 
+		<meta content="telephone=no,email=no" name="format-detection"> 	
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta name="x5-fullscreen"content="true"/>
+		<meta name="full-screen"content="yes">
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+		<title>椭圆</title>
+		<style>
+			*{margin:0;padding:0;}
+			.text-center{text-align: center;}
+			.wraper{border:1px solid red;margin:20px;padding:10px 0;}
+			.wraper .title{line-height: 40px;}
+			.wraper:after{content:"";display: block;clear:both;}
+			.ellipse{width:120px;height:60px;background-color: #f93;margin:10px;float:left;}
+			.test1{border-radius:5px 5px 100% 100%;}
+			.test2{border-radius:50% 50%;}
+			.test3{border-radius:100%  0 100% 0;}
+			.test4{border-radius:100%  0 0 0;}
+			.test5{border-radius:20px 20px 0 20px;}
+			.test6{border-radius:20px 30px 0 40px;}
+		</style>
+	</head>
+	<body>
+		<h3>难点在于：可以设置四个圆角处的圆弧半径 可以是% 也可以是像素</h3>
+		<p>%：每一个角的百分号 会同时作用于两条边，按照每条边的比例做弧线</p>
+
+		<div class="wraper">
+			<h2 class="text-center title">椭圆衍生：border-radius</h2>
+			<div class="ellipse test1"></div>
+			<div class="ellipse test2"></div>
+			<div class="ellipse test3"></div>
+			<div class="ellipse test4"></div>
+			<div class="ellipse test5"></div>
+			<div class="ellipse test6"></div>
+		</div>
+		
+		<div class="wraper">
+			<h2 class="text-center title">梯形</h2>
+			
+		</div>
+		
+	</body>
+</html>
+	

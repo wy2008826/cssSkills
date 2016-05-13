@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8">
+		<meta content="yes" name="apple-mobile-web-app-capable"> 
+		<meta content="yes" name="apple-touch-fullscreen"> 
+		<meta content="telephone=no,email=no" name="format-detection"> 	
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta name="x5-fullscreen"content="true"/>
+		<meta name="full-screen"content="yes">
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+		<title>平行四边形</title>
+		<style>
+			*{margin:0;padding:0;}
+			.text-center{text-align: center;}
+			.wraper{border:1px solid red;margin:20px;padding:10px 0;background-color: #f8f8f8;}
+			.wraper .title{line-height: 40px;}
+			.wraper:after{content:"";display: block;clear:both;}
+			.item{background-color: #f93;width:120px;height:60px;margin:30px auto;}
+			.test1{
+				background:linear-gradient(-64deg,transparent 20%,#f93 20%,#f93 80%,transparent 80%);
+				line-height: 60px;
+				padding:0 20px;
+			}
+			.test2{
+				background:linear-gradient(30deg,#f93 10px,#f93 10px,#f93 120px,transparent 120px);
+				line-height: 60px;
+				padding:0 20px;
+				position:relative;
+			}
+			.test2:after{
+				content:"";
+				position: absolute;
+				display: block;
+				width:0;
+				height:0;
+				top:0;
+				right: 0;
+				border-top:10px solid transparent;
+				border-right:10px solid transparent;
+				border-bottom:10px solid #f33;
+				border-left:10px solid #f33;
+				/*box-shadow: 2px 2px 0 2px rgba(50,60,60,0.5);*/
+			}
+			.test3{
+				height: 120px;
+				background:linear-gradient(#f93 10%,#f33 10%,#f33 30%);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wraper">
+			<h2 class="text-center title">平行四边形</h2>
+			<div class="item test1 text-center">平行四边形</div>
+			<div class="item test2 text-center">折角效果</div>
+			<div class="item test3 text-center"></div>
+		</div>
+	</body>
+</html>
+	

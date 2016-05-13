@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8">
+		<meta content="yes" name="apple-mobile-web-app-capable"> 
+		<meta content="yes" name="apple-touch-fullscreen"> 
+		<meta content="telephone=no,email=no" name="format-detection"> 	
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta name="x5-fullscreen"content="true"/>
+		<meta name="full-screen"content="yes">
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+		<title>多重边框-透明边框-内圆角</title>
+		<style>
+			*{margin:0;padding:0;}
+			.text-center{text-align: center;}
+			.wraper{border:1px solid red;margin:20px;padding:10px 0;}
+			.wraper .title{line-height: 40px;}
+			.wraper:after{content:"";display: block;clear:both;}
+			.border{background-color: #f93;width:120px;height:60px;margin:30px auto;}
+			.test1{
+				border:10px dashed hsla(120,50%,50%,0.2);
+				box-shadow: 0 0 0 10px #abc,0 0 0 20px #f9a,0 0 0 30px #678;
+			}
+			.test2{border-radius: 10px;outline:#acf solid 10px;box-shadow: 0 0 0 10px #acf;}
+			
+		</style>
+		
+	</head>
+	<body>
+		
+		<div class="wraper">
+			<h2 class="text-center title">透明边框-多重边框</h2>
+			<p><span>把边框设为虚线，发现背景色是从border最外层开始的</span></p>
+			<div class="border test1"></div>
+		</div>
+
+		<div class="wraper">
+			<h2 class="text-center title">内圆角</h2>
+			<div class="border test2"></div>
+		</div>
+	</body>
+</html>
+	
